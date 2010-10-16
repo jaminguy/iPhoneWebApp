@@ -1,8 +1,8 @@
 //
-//  iPhoneWebAppViewController.m
+//  LinkViewController.m
 //  iPhoneWebApp
 //
-//  Created by Jamin Guy on 9/10/10.
+//  Created by Jamin Guy on 10/16/10.
 //
 //	Copyright (c) 2010 Inphoenixity LLC
 //
@@ -24,46 +24,41 @@
 //	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //	THE SOFTWARE.
 
-#import "iPhoneWebAppViewController.h"
 #import "LinkViewController.h"
 
-@interface iPhoneWebAppViewController () 
 
-- (void)loadRoot;
-
-@end
-
-
-@implementation iPhoneWebAppViewController
-
-#define kExample1URL @"http://127.0.0.1/~jaming/stationfinder"
-#define kExample2URL @"http://127.0.0.1/~jaming/link_example"
+@implementation LinkViewController
 
 @synthesize webView;
-@synthesize activityIndicator;
+@synthesize webNavigationItem;
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.webView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
 	self.webView.delegate = self;
-	[self loadRoot];
 }
 
-- (void)loadRoot {
-	NSURL *url = [NSURL URLWithString:kExample2URL];
-	NSURLRequest *request = [NSURLRequest requestWithURL:url];
+
+/*
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+*/
+
+- (IBAction)doneButtonTap:(id)sender {
+	[self.parentViewController dismissModalViewControllerAnimated:YES];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)aWebView {
+	self.webNavigationItem.title = [aWebView stringByEvaluatingJavaScriptFromString:@"document.title"]; 
+}
+
+- (void)loadRequest:(NSURLRequest *)request {
 	[self.webView loadRequest:request];
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-	[self.activityIndicator stopAnimating];
-}
-
-- (void)reload {
-	self.activityIndicator.hidden = NO;
-	[self.activityIndicator startAnimating];
-	[self.webView reload];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
@@ -78,29 +73,23 @@
 	return YES;
 }
 
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return YES;
-}
-
-
 - (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];	
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-	self.webView = nil;
-	self.activityIndicator = nil;
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
 }
 
+
 - (void)dealloc {
-	[webView release];
-	[activityIndicator release];
     [super dealloc];
 }
+
 
 @end

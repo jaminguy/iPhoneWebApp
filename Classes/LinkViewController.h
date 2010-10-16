@@ -1,8 +1,8 @@
 //
-//  iPhoneWebAppViewController.h
+//  LinkViewController.h
 //  iPhoneWebApp
 //
-//  Created by Jamin Guy on 9/10/10.
+//  Created by Jamin Guy on 10/16/10.
 //
 //	Copyright (c) 2010 Inphoenixity LLC
 //
@@ -26,14 +26,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface iPhoneWebAppViewController : UIViewController <UIWebViewDelegate> {
+
+@interface LinkViewController : UIViewController <UIWebViewDelegate> {
 
 }
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
-@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, retain) IBOutlet UINavigationItem *webNavigationItem;
 
-- (void)reload;
+- (IBAction)doneButtonTap:(id)sender;
+
+- (void)loadRequest:(NSURLRequest *)request;
 
 @end
-
