@@ -257,7 +257,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>306</real>
+								<real>115</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -277,13 +277,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
+									<integer>5</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {306, 985}}</string>
+							<string>{{0, 0}, {115, 985}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -293,19 +293,19 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {323, 1003}}</string>
+						<string>{{0, 0}, {132, 1003}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>306</real>
+							<real>115</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>44 134 1446 1044 0 0 1920 1178 </string>
+						<string>0 134 1920 1044 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>323pt</string>
+					<string>132pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
@@ -318,7 +318,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>E1800535123AB70900D0DE33</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>iPhoneWebAppViewController.h</string>
+								<string>iPhoneWebAppViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,21 +326,23 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>E1800536123AB70900D0DE33</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>iPhoneWebAppViewController.h</string>
+										<string>iPhoneWebAppViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E1ADAA561269147F00458F2E</string>
+										<string>E14AE47A126CC3AD00582481</string>
 										<key>history</key>
 										<array>
 											<string>E1800593123AC8B900D0DE33</string>
 											<string>E1ADAA0E126911F300458F2E</string>
-											<string>E1ADAA4B1269141000458F2E</string>
 											<string>E1ADAA511269147F00458F2E</string>
-											<string>E1ADAA521269147F00458F2E</string>
 											<string>E1ADAA531269147F00458F2E</string>
-											<string>E1ADAA541269147F00458F2E</string>
-											<string>E1ADAA551269147F00458F2E</string>
+											<string>E1ADAAD3126A1B9700458F2E</string>
+											<string>E1ADAAD4126A1B9700458F2E</string>
+											<string>E1ADAAD5126A1B9700458F2E</string>
+											<string>E1ADAAF6126A39E700458F2E</string>
+											<string>E1ADAAF7126A39E700458F2E</string>
+											<string>E1ADAB05126A3B3300458F2E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -354,9 +356,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1118, 998}}</string>
+								<string>{{0, 0}, {1783, 998}}</string>
 								<key>RubberWindowFrame</key>
-								<string>44 134 1446 1044 0 0 1920 1178 </string>
+								<string>0 134 1920 1044 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -379,7 +381,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1118, 272}}</string>
+										<string>{{10, 27}, {1783, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 134 1920 1044 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -395,9 +399,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1118, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>44 134 1446 1044 0 0 1920 1178 </string>
+										<string>{{0, 0}, {614, 336}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -435,7 +437,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {568, 405}}</string>
+										<string>{{10, 27}, {1592, 254}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -444,7 +446,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>1118pt</string>
+					<string>1783pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -463,11 +465,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>E1ADA9FE12690CE500458F2E</string>
+				<string>E14AE47B126CC3AD00582481</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>E1ADA9FF12690CE500458F2E</string>
+				<string>E14AE47C126CC3AD00582481</string>
 				<string>E1800535123AB70900D0DE33</string>
-				<string>E1ADAA0012690CE500458F2E</string>
+				<string>E14AE47D126CC3AD00582481</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -659,12 +661,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>E1ADAA2B1269128400458F2E</string>
-		<string>E1ADAA2C1269128400458F2E</string>
 		<string>/Users/jaming/Dropbox/dev/Inphoenixity/bcn10/iPhoneWebApp/iPhoneWebApp.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>44 134 1446 1044 0 0 1920 1178 </string>
+	<string>0 134 1920 1044 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
