@@ -29,7 +29,8 @@
 
 @implementation iPhoneWebAppAppDelegate
 
-#define kLastActiveMaxTimeInterval 10
+//12 hours
+#define kLastActiveMaxTimeInterval 60 * 60 * 12
 
 @synthesize window;
 @synthesize viewController;
@@ -72,6 +73,9 @@
     /*
      Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
+	
+	//if more than 12 hours has passed since last app run
+	// the site should be reloaded
 	NSDate *lastActiveDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"lastActiveDate"];
 	if([[NSDate date] timeIntervalSinceDate:lastActiveDate] > kLastActiveMaxTimeInterval) {
 		[self.viewController reload];

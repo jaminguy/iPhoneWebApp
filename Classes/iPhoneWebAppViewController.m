@@ -36,8 +36,7 @@
 
 @implementation iPhoneWebAppViewController
 
-#define kExample1URL @"http://127.0.0.1/~jaming/stationfinder"
-#define kExample2URL @"http://127.0.0.1/~jaming/link_example"
+#define kRootURL @"http://stationfinder.griffintechnology.com"
 
 @synthesize webView;
 @synthesize activityIndicator;
@@ -51,7 +50,7 @@
 }
 
 - (void)loadRoot {
-	NSURL *url = [NSURL URLWithString:kExample2URL];
+	NSURL *url = [NSURL URLWithString:kRootURL];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	[self.webView loadRequest:request];
 }
